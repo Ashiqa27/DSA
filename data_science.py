@@ -71,10 +71,10 @@ if uploaded_file is not None:
     st.subheader("Data Visualization:")
 
     # Show Correlation Heatmap
-    if st.checkbox("Show Correlation Heatmap"):
-        st.write("Correlation Heatmap:")
-        corr_matrix = data.corr()
-        st.dataframe(corr_matrix, height=300)
+    
+    st.write("Correlation Heatmap:")
+    corr_matrix = data.corr()
+    st.dataframe(corr_matrix, height=300)
 
     # Univariate and Bivariate Analysis
     analysis_col1, analysis_col2 = st.columns(2)
