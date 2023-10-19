@@ -1,5 +1,13 @@
 import streamlit as st
 import pandas as pd
+# Check if matplotlib is installed
+try:
+    importlib.import_module('matplotlib')
+except ImportError:
+    st.warning("Matplotlib not found. Installing...")
+    st.run("pip install matplotlib")
+
+# Now, import matplotlib
 import matplotlib.pyplot as plt
 import seaborn as sns
 
