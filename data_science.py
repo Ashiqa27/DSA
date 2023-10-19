@@ -77,9 +77,9 @@ if uploaded_file is not None:
         st.dataframe(corr_matrix, height=300)
 
         # Calculate figure size proportionally
-        fig_width, fig_height = 1,2
+        fig_width, fig_height = 2,1
         heatmap_fig = plt.figure(figsize=(fig_width, fig_height))
-        sns.heatmap(corr_matrix, annot=True, cmap="coolwarm", linewidths=0.5, fmt=".2f", square=True, annot_kws={"size": 5})
+        sns.heatmap(corr_matrix, annot=True, cmap="coolwarm", linewidths=0.5, fmt=".2f", square=True, annot_kws={"size": 2})
         st.pyplot(heatmap_fig)
 
     # Univariate and Bivariate Analysis
